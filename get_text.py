@@ -35,6 +35,6 @@ def report_dict(book_str):
     sorted_dict = get_char_count(book_str)
     for x, y in sorted_dict.items():
         if x.isalpha():
-            print (f"{x}: {y}\n")
+            print (f"{x}: {y}")
     print("============= END ===============")
     
