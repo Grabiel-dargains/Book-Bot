@@ -22,4 +22,19 @@ def get_char_count(book_str):
     char_count = {}
     for x in book_str.lower():
         char_count[x] = char_count.get(x, 0) + 1
-    return char_count
+    sorted_dict = dict(sorted(char_count.items(), key=lambda item: item[1], reverse=True))
+    
+    return sorted_dict
+
+def report_dict(book_str):
+    print("============ BOOKBOT ============")
+    print(f"Analyzing book found at books/frankenstein.txt...")
+    print("----------- Word Count ----------")
+    get_num_words(book_str)
+    print("--------- Character Count -------")
+    sorted_dict = get_char_count(book_str)
+    for x, y in sorted_dict.items():
+        if x.isalpha():
+            print (f"{x}: {y}\n")
+    print("============= END ===============")
+    

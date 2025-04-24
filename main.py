@@ -12,4 +12,7 @@ def __main__():
     contagem_caracteres = gt.get_char_count(book_str)
     print (contagem_caracteres)
 
+    gt.report_dict(book_str)
+    
+
 __main__()
