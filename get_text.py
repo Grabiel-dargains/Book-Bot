@@ -1,6 +1,7 @@
-def get_book_text(arquivo):
+def get_book_text(book_name):
     """Path do livro como input, string como output."""
-    with open(arquivo, "r", encoding='utf-8') as livro:
+    
+    with open(f"./books/{book_name}.txt", "r", encoding='utf-8') as livro:
         leitura = livro.read()
     return leitura
 
